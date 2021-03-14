@@ -1,0 +1,122 @@
+/* Reset browser styles */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+/* Generic styles */
+
+body {
+  font-family: "Source Code Pro", monospace;
+  font-size: 14px;
+  line-height: 20px;
+  color: #c6d5e4;
+  background-color: #2B2B2B;
+  padding: 32px 25px 16px 25px;
+}
+
+strong {
+  font-weight: normal;
+  color: #D88332;
+}
+
+a {
+  color: #A5C25C;
+  text-decoration: underline;
+}
+
+/* Section behaviour */
+
+@media (min-width: 1400px) {
+  html, body {
+    height: calc(100% - 32px - 16px);
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .section-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    column-count: 2;
+  }
+
+  section {
+    width: 50%;
+    margin-bottom: 16px;
+  }
+}
+
+/* Headings */
+
+h1 {
+  font-size: 14px;
+  color: #FFC66D;
+  margin-bottom: 16px;
+  font-weight: normal;
+}
+
+h1:before {
+  content: '/* ';
+}
+
+h1:after {
+  content: ' */';
+}
+
+/* Text */
+
+p {
+  margin-left: 25px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  max-width: 560px;
+}
+
+/* "Comment"-style texts */
+
+.comment {
+  color: #999999;
+}
+
+.comment:before {
+  content: '[';
+}
+
+.comment:after {
+  content: ']';
+}
+
+/* Lists */
+
+ul {
+  margin-left: 25px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+li:before {
+  content: '- ';
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  p, ul, .project-description {
+    margin-left: 0;
+  }
+
+  ul.big-list li {
+    margin-bottom: 16px;
+  }
+}
